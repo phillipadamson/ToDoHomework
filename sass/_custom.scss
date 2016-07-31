@@ -1,0 +1,20 @@
+//Custom Variables
+
+#load {
+  img {
+    width: 100%;
+    padding: 300px;
+  }
+}
+
+.to-do-nav {
+  background-color: #112e5c;
+  border-radius: 0px;
+  font-weight: bold; 
+}
+
+.navbar-brand > img {
+    display: block;
+    height: 27;
+    padding-bottom: 5px;
+}
