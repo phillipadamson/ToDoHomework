@@ -1,20 +1,65 @@
 //Custom Variables
-
 #load {
-  img {
-    width: 100%;
-    padding: 300px;
-  }
+    img {
+        width: 100%;
+        padding: 300px;
+    }
 }
-
 .to-do-nav {
-  background-color: #112e5c;
-  border-radius: 0px;
-  font-weight: bold; 
+    background-color: #112e5c;
+    border-radius: 0;
+    font-weight: bold;
+    margin-bottom: 0;
+    border: 0;
 }
-
 .navbar-brand > img {
     display: block;
-    height: 27;
+    height: 27px;
     padding-bottom: 5px;
+}
+.navbar-buffer {
+    background-color: #3667ae;
+    color: white;
+    height: 130px;
+}
+.nav-tabs {
+    margin-top: -40px;
+    li {
+        width: 25%;
+        text-align: center;
+        a {
+            border-radius: 0;
+            background-color: #27508d;
+            color: white;
+        }
+    }
+    li.active {
+        a {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+.tab-body {
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 0;
+}
+#tabs {
+    padding-left: 0;
+    padding-right: 0;
+    background-color: white;
+}
+.footer-content {
+    background-color: #494949;
+    color: white;
+    padding: 5px;
+    margin-top: 50px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    img {
+        height: 22px;
+        margin: 0 50px 0 15px;
+    }
 }
