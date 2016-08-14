@@ -1,31 +1,39 @@
 <html>
-    <head>
-        <title>To Do App</title>
-        <base href="/">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-        <!-- 1. Load libraries -->
-        <!-- Polyfill(s) for older browsers -->
-        <script src="node_modules/core-js/client/shim.min.js"></script>
-        <script src="node_modules/zone.js/dist/zone.js"></script>
-        <script src="node_modules/reflect-metadata/Reflect.js"></script>
-        <script src="node_modules/systemjs/dist/system.src.js"></script>
-        <!-- 2. Configure SystemJS -->
-        <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-        <script src="systemjs.config.js"></script>
-        <script>
-            System.import ('app').catch(function(err) {
-                console.error(err);
-            });
-        </script>
-    </head>
-    <!-- 3. Display the application -->
-    <body>
-        <my-app>
-            <div id="load">
-                <img src="assets/images/ajax_loader_gray_512.gif"></img>
-            </div>
-        </my-app>
-    </body>
+
+<head>
+    <title>To Do App</title>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link href="node_modules/ng2-toastr/bundles/ng2-toastr.min.css" rel="stylesheet" />
+
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/ng2-toastr/bundles/ng2-toastr.min.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err) {
+            console.error(err);
+        });
+    </script>
+</head>
+<!-- 3. Display the application -->
+
+<body>
+    <my-app>
+        <div id="load">
+            <img src="assets/images/ajax_loader_gray_512.gif"></img>
+        </div>
+    </my-app>
+</body>
+
 </html>

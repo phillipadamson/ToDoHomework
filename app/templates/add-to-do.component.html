@@ -1,1 +1,24 @@
-<h1>Add to do</h1>
+<div class="form-task">
+    <div class="row">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-8 form-group">
+            <label for="taskName">Task Name</label>
+            <div class="input-group">
+                <div class="input-group-addon"><i class="fa fa-tasks" aria-hidden="true"></i></div>
+                <input type="text" id="taskName" class="form-control" [(ngModel)]="taskName" (keydown)="keyDownFunction($event)">
+            </div>
+        </div>
+        <div class="col-xs-2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+        </div>
+        <div class="col-xs-8 text-center">
+            <button id="task-submit" class="btn btn-primary" (click)="submitTask()" [disabled]="taskName===''">Submit Task</button>
+        </div>
+        <div class="col-xs-2">
+        </div>
+    </div>
+</div>

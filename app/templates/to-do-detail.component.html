@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-xs-12 text-center">
+        <div class="form-group">
+            <input type="text" id="task-name" class="form-control" [(ngModel)]="objTask.task_name" (keydown)="keyDownLocalFunction($event, objTask)">
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" id="task-submit" (click)="updateLocalTask(objTask)">Update</button>
+        </div>
+    </div>
+</div>

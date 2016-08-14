@@ -6,6 +6,9 @@ import { AvFooterComponent } from './av-footer.component';
 import { ListToDoComponent } from './list-to-do.component';
 import { AddToDoComponent } from './add-to-do.component';
 
+// Add the RxJS Observable opertors we need in this app.
+import './rxjs-operators';
+
 @Component({
   selector: 'my-app',
   template: `<nav-bar></nav-bar>

@@ -17,7 +17,7 @@
     height: 130px;
 }
 .nav-tabs {
-    margin-top: -41px;
+    margin-top: -44px;
     li {
         width: 50%;
         text-align: center;
@@ -54,6 +54,12 @@
     background-color: white;
     padding-left: 15px;
     padding-right: 0;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.15);
+    -moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);
+    label {
+        padding: 5px 5px 5px 0;
+    }
 }
 .footer-content {
     background-color: #494949;
@@ -68,6 +74,48 @@
         margin: 0 50px 0 15px;
     }
 }
+.form-task {
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+.form-control {
+    height: 50px;
+}
+.task-list {
+    padding: 15px;
+    border: 4px;
+    border-color: #3667ae;
+    border-style: solid;
+    margin-bottom: 1px;
+    .fa-times-circle-o {
+        float: right;
+        font-size: 20px;
+        color: #27508d;
+    }
+    .fa-times-circle-o:hover {
+        color: #112e5c;
+    }
+    .fa-chevron-circle-down {
+        font-size: 20px;
+        color: #27508d;
+        margin-right: 7px;
+    }
+    .fa-chevron-circle-down:hover {
+        color: #112e5c;
+    }
+    .fa-chevron-circle-right {
+        font-size: 20px;
+        color: #27508d;
+        margin-right: 7px;
+    }
+    .fa-chevron-circle-right:hover {
+        color: #112e5c;
+    }
+}
+.group-task {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 #load {
     img {
         width: 100%;
@@ -81,7 +129,21 @@
 }
 #right-tab {
     margin-right: 0;
+    margin-left: 0;
 }
 #left-tab {
     margin-left: 0;
+    margin-right: 0;
+}
+#task-submit {
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #27508d;
+}
+#task-submit:hover {
+    background-color: #112e5c;
+}
+#task-name {
+    width: 90%;
+    margin: 25px;
 }
