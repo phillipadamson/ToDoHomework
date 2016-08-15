@@ -70,8 +70,6 @@ export class ListToDoComponent implements OnInit {
     keyDownFunction($event) {
       if($event.event.keyCode === 13) {
         this.updateTask($event.objTask);
-      } else {
-        console.log(`key press${$event.event.keyCode}${$event.objTask}`);
       }
     }
 }
