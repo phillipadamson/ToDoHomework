@@ -14,8 +14,12 @@ export class TaskService {
 
     getTasks(): Observable<any[]> {
         let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
         headers.append('Application-ID', this.appId);
-        return this.http.get(this.apiUrl, { headers: headers })
+        let options = new RequestOptions({
+            headers: headers
+        });
+        return this.http.get(this.apiUrl, options)
             .map(this.extractData)
             .catch(this.handleError)
     }
@@ -26,9 +30,12 @@ export class TaskService {
     }
 
     private handleError(error: any) {
-        let errMsg = (error.message) ? error.message :
-            error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-        console.log(errMsg);
+        let parsedError = JSON.parse(error._body);
+        let errMsg = '';
+        for (let i = 0; i < parsedError.errors.length; i++) {
+            errMsg += (parsedError.errors[i].exception) ? parsedError.errors[i].exception :
+                parsedError.status ? `${parsedError.status} - ${parsedError.statusText}` : 'Server error';
+        }
         return Observable.throw(errMsg);
     }
 

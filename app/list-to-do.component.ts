@@ -26,7 +26,7 @@ export class ListToDoComponent implements OnInit {
         this.taskService.getTasks()
             .subscribe(
             tasks => this.populateTask(tasks),
-            error => error => this.toastr.error(error, 'Oops!')
+            error => this.toastr.error(error, 'Oops!')
             );
     }
 
@@ -54,7 +54,6 @@ export class ListToDoComponent implements OnInit {
             )
     }
     updateTask(objTask: any) {
-        console.log(`it made it here. ${objTask.task_name}`);
         for (let i = 0; i < this.tasks.length; i++) {
             if (this.tasks[i].task_id === objTask.task_id) {
                 this.tasks[i].task_name = objTask.task_name;
@@ -63,9 +62,6 @@ export class ListToDoComponent implements OnInit {
         this.taskService.updateTask(objTask)
             .subscribe(task => this.toastr.success(`${task.task_name} was successfully modified!`, 'Success!'),
             error => this.toastr.error(error, 'Oops!'));
-
-
-        console.log(objTask);
     }
     keyDownFunction($event) {
       if($event.event.keyCode === 13) {

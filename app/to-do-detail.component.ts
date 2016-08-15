@@ -13,7 +13,6 @@ export class ToDoDetailComponent implements OnInit {
     objTask: any;
     ngOnInit() {
         this.objTask = Object.assign({}, this.task);
-        console.log(this.objTask);
     }
     updateLocalTask(objTask: any) {
       this.updateTask.emit(objTask);
