@@ -57,15 +57,22 @@ export class ListToDoComponent implements OnInit {
         for (let i = 0; i < this.tasks.length; i++) {
             if (this.tasks[i].task_id === objTask.task_id) {
                 this.tasks[i].task_name = objTask.task_name;
+                this.tasks[i].blnShow = false;
             }
         }
         this.taskService.updateTask(objTask)
-            .subscribe(task => this.toastr.success(`${task.task_name} was successfully modified!`, 'Success!'),
-            error => this.toastr.error(error, 'Oops!'));
+            .subscribe(task => this.updateSuccess(task),
+            error => this.updateFailure(error));
     }
     keyDownFunction($event) {
-      if($event.event.keyCode === 13) {
-        this.updateTask($event.objTask);
-      }
+        if ($event.event.keyCode === 13) {
+            this.updateTask($event.objTask);
+        }
+    }
+    updateSuccess(task: any) {
+        this.toastr.success(`${task.task_name} was successfully modified!`, 'Success!');
+    }
+    updateFailure(error: any) {
+      this.toastr.error(error, 'Oops!');
     }
 }

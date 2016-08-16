@@ -15,11 +15,19 @@ export class AddToDoComponent {
 
     submitTask() {
         this.taskService.addTask(this.taskName)
-            .subscribe(task => this.toastr.success(`${task.task_name} was successfully added!`, 'Success!'), error => this.toastr.error(error, 'Oops!'));
+            .subscribe(task => this.submitSuccess(task), error => this.submitFailure(error));
+        this.taskName = '';
     }
     keyDownFunction(event) {
       if(event.keyCode === 13) {
         this.submitTask();
       }
+    }
+    submitSuccess(task: any) {
+      this.toastr.success(`${task.task_name} was successfully added!`, 'Success!');
+      this.taskName = '';
+    }
+    submitFailure(error: any) {
+      this.toastr.error(error, 'Oops!');
     }
 }
