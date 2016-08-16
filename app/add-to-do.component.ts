@@ -16,7 +16,6 @@ export class AddToDoComponent {
     submitTask() {
         this.taskService.addTask(this.taskName)
             .subscribe(task => this.submitSuccess(task), error => this.submitFailure(error));
-        this.taskName = '';
     }
     keyDownFunction(event) {
       if(event.keyCode === 13) {

@@ -4,13 +4,13 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
 // Get config information
-import { config } from '../app.config';
+import { Config } from '../app.config';
 
 @Injectable()
 export class TaskService {
-    constructor(private http: Http) { }
-    private apiUrl = config.avantlinkApiUrl;
-    private appId = config.avantlinkApi;
+    constructor(private http: Http, private config: Config) { }
+    private apiUrl = this.config.getAvantLinkUrl();
+    private appId = this.config.getAvantlinkApi();
 
     getTasks(): Observable<any[]> {
         let headers = new Headers();

@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { NgClass } from '@angular/common';
 import { TaskService } from './services/task.service';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
-import { Observable } from 'rxjs/Observable'
+import { Observable } from 'rxjs/Observable';
 
 import { ToDoDetailComponent } from './to-do-detail.component';
 
