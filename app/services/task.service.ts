@@ -9,8 +9,10 @@ import { Config } from '../app.config';
 @Injectable()
 export class TaskService {
     constructor(private http: Http, private config: Config) { }
-    private apiUrl = this.config.getAvantLinkUrl();
-    private appId = this.config.getAvantlinkApi();
+
+    private apiUrl = this.config.getApiUrl();
+    private appId = this.config.getApiKey();
+
 
     getTasks(): Observable<any[]> {
         let headers = new Headers();
